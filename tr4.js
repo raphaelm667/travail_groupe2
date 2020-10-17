@@ -1,36 +1,36 @@
-let score = [[Math.floor(Math.random()*8),Math.floor(Math.random()*8)],[Math.floor(Math.random()*8),Math.floor(Math.random()*8)],[Math.floor(Math.random()*8),Math.floor(Math.random()*8)]];
+let score = [[Math.floor(Math.random()*8),Math.floor(Math.random()*8),", victoire de PSG",", victoire de Manchester"],[Math.floor(Math.random()*8),Math.floor(Math.random()*8),", victoire de Liverpool",", victoire de OM"],[Math.floor(Math.random()*8),Math.floor(Math.random()*8),", victoire de OL",", victoire de FCB"]];
 let equipe = ["PSG","Manchester","Liverpool","OM","OL","FCB"];
 let victoire = [];
+let y=1;
 
 function match(){
-	if(score[0][0]>score[0][1]){
-		victoire[0] = "PSG";
-	}else {
-		victoire[0] = "Manchester";
+	for(let i=0;i<3;i++)
+	{
+		if(score[i][0]>score[i][1]){
+			
+			victoire[i] = score[i][3]; 
+			victoire[i+3] = equipe[y]; 
+			
+		}else if(score[i][0]==score[i][1]){
+			
+			victoire[i] = ", égalité";
+		}else {
+			
+			victoire[i] = score[i][4];
+			victoire[i+3] = equipe[y+1]; 
+		}
 	}
-	if(score[1][0]>score[1][1]){
-		
-		victoire[1]= "Liverpool";
-	}else {
-		
-		victoire[1] = "OM";
-	}
-	if(score[2][0]>score[2][1]){
-		
-		victoire[2] = "OL";
-	}else {
-		
-		victoire[2] = "FCB";
-	}
-	return victoire;
+	y+=2;
 }
+	
 
-let result = match();
+
+match();
 
 let gagnant = [
-"Resultat du match 1: " + equipe[0] + " contre " + equipe[1] + " résultat " + score[0][0] + " : " + score[0][1] + ", victoire de " + victoire[0],
-"Resultat du match 2: " + equipe[2] + " contre " + equipe[3] + " résultat " + score[1][0] + " : " + score[1][1] + ", victoire de " + victoire[1],
-"Resultat du match 3: " + equipe[4] + " contre " + equipe[5] + " résultat " + score[2][0] + " : " + score[2][1] + ", victoire de " + victoire[2];
+"Resultat du match 1: " + equipe[0] + " contre " + equipe[1] + " résultat " + score[0][0] + " : " + score[0][1] + victoire[0],
+"Resultat du match 2: " + equipe[2] + " contre " + equipe[3] + " résultat " + score[1][0] + " : " + score[1][1] + victoire[1],
+"Resultat du match 3: " + equipe[4] + " contre " + equipe[5] + " résultat " + score[2][0] + " : " + score[2][1] + victoire[2]];
 
 let choix = [[prompt("vous pariez sur PSG ou Manchester"),+prompt("Combien parier vous ?")],
 [prompt("vous pariez sur Liverpool ou OM"),+prompt("Combien parier vous ?")],
