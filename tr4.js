@@ -1,29 +1,26 @@
 let score = [[Math.floor(Math.random()*8),Math.floor(Math.random()*8)],[Math.floor(Math.random()*8),Math.floor(Math.random()*8)],[Math.floor(Math.random()*8),Math.floor(Math.random()*8)]];
 let equipe = ["PSG","Manchester","Liverpool","OM","OL","FCB"];
-let victoire;
+let victoire = [];
 
 function match(){
-	victoire = [[],[],[]];
 	if(score[0][0]>score[0][1]){
-		victoire[0][0] = score[0][0];
-		victoire[0][1] = "PSG";
+		victoire[0] = "PSG";
 	}else {
-		victoire[0][0] = score[0][1];
-		victoire[0][1] = "Manchester";
+		victoire[0] = "Manchester";
 	}
 	if(score[1][0]>score[1][1]){
-		victoire[1][0] = score[1][0];
-		victoire[1][1] = "Liverpool";
+		
+		victoire[1]= "Liverpool";
 	}else {
-		victoire[1][0] = score[1][1];
-		victoire[1][1] = "OM";
+		
+		victoire[1] = "OM";
 	}
 	if(score[2][0]>score[2][1]){
-		victoire[2][0] = score[2][0];
-		victoire[2][1] = "OL";
+		
+		victoire[2] = "OL";
 	}else {
-		victoire[2][0] = score[2][1];
-		victoire[2][1] = "FCB";
+		
+		victoire[2] = "FCB";
 	}
 	return victoire;
 }
@@ -31,32 +28,46 @@ function match(){
 let result = match();
 
 let gagnant = [
-"Resultat du match 1: " + equipe[0] + " contre " + equipe[1] + " résultat " + score[0][0] + " : " + score[0][1] + ", victoire de " + victoire[0][1],
-"Resultat du match 2: " + equipe[2] + " contre " + equipe[3] + " résultat " + score[1][0] + " : " + score[1][1] + ", victoire de " + victoire[1][1],
-"Resultat du match 3: " + equipe[4] + " contre " + equipe[5] + " résultat " + score[2][0] + " : " + score[2][1] + ", victoire de " + victoire[2][1]];
+"Resultat du match 1: " + equipe[0] + " contre " + equipe[1] + " résultat " + score[0][0] + " : " + score[0][1] + ", victoire de " + victoire[0],
+"Resultat du match 2: " + equipe[2] + " contre " + equipe[3] + " résultat " + score[1][0] + " : " + score[1][1] + ", victoire de " + victoire[1],
+"Resultat du match 3: " + equipe[4] + " contre " + equipe[5] + " résultat " + score[2][0] + " : " + score[2][1] + ", victoire de " + victoire[2];
 
-let choix = [prompt("vous pariez sur PSG ou Manchester"),
-prompt("vous pariez sur Liverpool ou OM"),
-prompt("vous pariez sur OL ou FCB")];
+let choix = [[prompt("vous pariez sur PSG ou Manchester"),+prompt("Combien parier vous ?")],
+[prompt("vous pariez sur Liverpool ou OM"),+prompt("Combien parier vous ?")],
+[prompt("vous pariez sur OL ou FCB"),+prompt("Combien parier vous ?")]];
+
+
 
 function resultat(){
   console.log(gagnant[0]);
-  if (choix[0] == victoire[0][1]){
-    console.log("vous avez gagnez votre paris pour le premier match");
+  if (choix[0][0] == victoire[0]){
+    	console.log("vous avez gagnez votre paris pour le premier match");
+	choix[0][1] = choix[0][1]*2;
+	console.log("Vous avez gagner"+choix[0][1]+"€");  
   }else{
-    console.log("vous avez perdu votre paris pour le premier match");
+    	console.log("vous avez perdu votre paris pour le premier match");
+	choix[0][1] = 0;
+	console.log("Vous avez tout perdus !");  
   }
   console.log(gagnant[1]);
-  if (choix[1] == victoire[1][1]){
-    console.log("vous avez gagnez votre paris pour le deuxième match");
+  if (choix[1][0] == victoire[1]){
+    	console.log("vous avez gagnez votre paris pour le deuxième match");
+	choix[0][2] = choix[0][2]*2;
+	console.log("Vous avez gagner"+choix[0][2]+"€");  
   }else{
-    console.log("vous avez perdu votre paris pour le deuxième match");
+   	 console.log("vous avez perdu votre paris pour le deuxième match");
+	 choix[0][2] = 0;
+	 console.log("Vous avez tout perdus !");  
   }
   console.log(gagnant[2]);
-  if (choix[2] == victoire[2][1]){
-    console.log("vous avez gagnez votre paris pour le troisième match");
+  if (choix[2][0] == victoire[2]){
+   	 console.log("vous avez gagnez votre paris pour le troisième match");
+	 choix[0][3] = choix[0][3]*2;
+	 console.log("Vous avez gagner"+choix[0][3]+"€");  
   }else{
-    console.log("vous avez perdu votre paris pour le troisième match");
+  	  console.log("vous avez perdu votre paris pour le troisième match");
+	  choix[0][3] = 0;
+	  console.log("Vous avez tout perdus !");  
   }
 }
 
