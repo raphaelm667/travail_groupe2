@@ -8,19 +8,19 @@ function match(){
 	{
 		if(score[i][0]>score[i][1]){
 			
-			victoire[i] = score[i][3]; 
-			victoire[i+3] = equipe[y]; 
+			victoire[i] = score[i][2]; 
+			victoire[i+3] = equipe[y];
 			
 		}else if(score[i][0]==score[i][1]){
 			
 			victoire[i] = ", égalité";
-		}else {
+		}else if(score[i][0]<score[i][1]){
 			
-			victoire[i] = score[i][4];
+			victoire[i] = score[i][3];
 			victoire[i+3] = equipe[y+1]; 
 		}
+		y+=2;
 	}
-	y+=2;
 }
 	
 
