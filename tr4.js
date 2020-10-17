@@ -40,7 +40,7 @@ let choix = [[prompt("vous pariez sur PSG ou Manchester"),+prompt("Combien parie
 
 function resultat(){
   console.log(gagnant[0]);
-  if (choix[0][0] == victoire[0]){
+  if (choix[0][0] == victoire[3]){
     	console.log("vous avez gagnez votre paris pour le premier match");
 	choix[0][1] = choix[0][1]*2;
 	console.log("Vous avez gagner"+choix[0][1]+"€");  
@@ -50,7 +50,7 @@ function resultat(){
 	console.log("Vous avez tout perdus !");  
   }
   console.log(gagnant[1]);
-  if (choix[1][0] == victoire[1]){
+  if (choix[1][0] == victoire[4]){
     	console.log("vous avez gagnez votre paris pour le deuxième match");
 	choix[0][2] = choix[0][2]*2;
 	console.log("Vous avez gagner"+choix[0][2]+"€");  
@@ -60,7 +60,7 @@ function resultat(){
 	 console.log("Vous avez tout perdus !");  
   }
   console.log(gagnant[2]);
-  if (choix[2][0] == victoire[2]){
+  if (choix[2][0] == victoire[5]){
    	 console.log("vous avez gagnez votre paris pour le troisième match");
 	 choix[0][3] = choix[0][3]*2;
 	 console.log("Vous avez gagner"+choix[0][3]+"€");  
