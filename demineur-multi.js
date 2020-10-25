@@ -47,9 +47,11 @@ function testVal(ligne, colone,tourJoueur){
     }else if (plateau[ligne][colone] === 0){
         alert("Safe");
         plateau[ligne][colone] = 3;
+        tableJoueur[tourJoueur][0] += 50;
     }else{
         alert("BOOM");
         plateau[ligne][colone] = 3;
         tableJoueur[tourJoueur][1] -= 1;
+        tableJoueur[tourJoueur][0] -= 100;
     }
 }
