@@ -35,55 +35,9 @@ function testVal(ligne, colone){
         nbrVie -= 1;
     }
 }
-
-function hut1(){
-    testVal(0,0);
-}function hut2(){
-    testVal(0,1);
-}function hut3(){
-    testVal(0,2);
-}function hut4(){
-    testVal(0,3);
-}function hut5(){
-    testVal(0,4);
-}function hut6(){
-    testVal(1,0);
-}function hut7(){
-    testVal(1,1);
-}function hut8(){
-    testVal(1,2);
-}function hut9(){
-    testVal(1,3);
-}function hut10(){
-    testVal(1,4);
-}function hut11(){
-    testVal(2,0);
-}function hut12(){
-    testVal(2,1);
-}function hut13(){
-    testVal(2,2);
-}function hut14(){
-    testVal(2,3);
-}function hut15(){
-    testVal(2,4);
-}function hut16(){
-    testVal(3,0);
-}function hut17(){
-    testVal(3,1);
-}function hut18(){
-    testVal(3,2);
-}function hut19(){
-    testVal(3,3);
-}function hut20(){
-    testVal(3,4);
-}function hut21(){
-    testVal(4,0);
-}function hut22(){
-    testVal(4,1);
-}function hut23(){
-    testVal(4,2);
-}function hut24(){
-    testVal(4,3);
-}function hut25(){
-    testVal(4,4);
+function reset()
+{
+    plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+    nbrVie = 4;
+    nbrBomb = +prompt("combien de bombes sur le terrain ?");
 }
