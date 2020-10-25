@@ -1,6 +1,8 @@
-let nbrBomb = +prompt("combien de bombes sur le terrain ?");
 let plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 let nbrVie = 4;
+function nbBomb()
+{
+let nbrBombe = +prompt("combien de bombes sur le terrain ?");
 for(let i = 0; i <= nbrBomb; i++){
     let posBomb1 = Math.floor(Math.random()*5);
     let posBomb2 = Math.floor(Math.random()*5);
@@ -11,6 +13,7 @@ for(let i = 0; i <= nbrBomb; i++){
     if (plateau[posBomb1][posBomb2] === 0){
         plateau[posBomb1][posBomb2] = 2;
     }
+  }
 }
 
 for (let i = 0; i < 5; i++){
