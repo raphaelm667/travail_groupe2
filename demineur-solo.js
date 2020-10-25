@@ -36,54 +36,54 @@ function testVal(ligne, colone){
     }
 }
 
-function case1(){
+function hut1(){
     testVal(0,0);
-}function case2(){
+}function hut2(){
     testVal(0,1);
-}function case3(){
+}function hut3(){
     testVal(0,2);
-}function case4(){
+}function hut4(){
     testVal(0,3);
-}function case5(){
+}function hut5(){
     testVal(0,4);
-}function case6(){
+}function hut6(){
     testVal(1,0);
-}function case7(){
+}function hut7(){
     testVal(1,1);
-}function case8(){
+}function hut8(){
     testVal(1,2);
-}function case9(){
+}function hut9(){
     testVal(1,3);
-}function case10(){
+}function hut10(){
     testVal(1,4);
-}function case11(){
+}function hut11(){
     testVal(2,0);
-}function case12(){
+}function hut12(){
     testVal(2,1);
-}function case13(){
+}function hut13(){
     testVal(2,2);
-}function case14(){
+}function hut14(){
     testVal(2,3);
-}function case15(){
+}function hut15(){
     testVal(2,4);
-}function case16(){
+}function hut16(){
     testVal(3,0);
-}function case17(){
+}function hut17(){
     testVal(3,1);
-}function case18(){
+}function hut18(){
     testVal(3,2);
-}function case19(){
+}function hut19(){
     testVal(3,3);
-}function case20(){
+}function hut20(){
     testVal(3,4);
-}function case21(){
+}function hut21(){
     testVal(4,0);
-}function case22(){
+}function hut22(){
     testVal(4,1);
-}function case23(){
+}function hut23(){
     testVal(4,2);
-}function case24(){
+}function hut24(){
     testVal(4,3);
-}function case25(){
+}function hut25(){
     testVal(4,4);
 }
