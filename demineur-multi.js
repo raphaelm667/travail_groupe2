@@ -1,5 +1,6 @@
 let plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 let tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
+let nbJoueur = +prompt("combien de joueurs ?"),let maxTour=0;
 
 function nbBombe(){
 let nbrBomb = +prompt("combien de bombes sur le terrain ?");
@@ -15,24 +16,33 @@ for(let i = 0; i <= nbrBomb; i++){
     }
   }
 }
-function joueur()
+function joueur(ligne,colone)
 {
-  let tourJoueur,nbJoueur = +prompt("combien de joueurs ?"),let maxTour=0;
+  let tourJoueur;
   while(maxTour !== 25){
   for(let i=0;i<nbJoueur;i++)
   {
-    tourJoueur = (i+1);
-    temp(tourJoueur);
+    tourJoueur = i;
+    if (tableJoueur[tourJoueur][1] !== 0){
+    testVal(ligne,colone,tourJoueur);
+    }
+    else
+    {
+    alert("Joueur"+ (tourjoueur +1) +" n'as plus de vie");
+    }
     maxTour++;
    }
  }
-  return tourJoueur;
 }
 
 function testVal(ligne, colone,tourJoueur){
-    if (nbrVie === 0){
-        alert("vous n'avez plus de vie recommencé une partie");
-    }else if (plateau[ligne][colone] === 3){
+    let unSur2=-1;
+    unSur2++;
+    if(unSur2%2==0)
+    {
+        joueur(ligne,colone);
+    }
+    if (plateau[ligne][colone] === 3){
         alert("case deja testée");
     }else if (plateau[ligne][colone] === 0){
         alert("Safe");
@@ -40,5 +50,6 @@ function testVal(ligne, colone,tourJoueur){
     }else{
         alert("BOOM");
         plateau[ligne][colone] = 3;
+        tableJoueur[tourJoueur][1] -= 1;
     }
 }
