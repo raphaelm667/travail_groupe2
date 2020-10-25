@@ -3,8 +3,8 @@ let tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
 let nbJoueur = +prompt("combien de joueurs ?"),maxTour=0;
 
 function nbBombe(){
-let nbrBomb = +prompt("combien de bombes sur le terrain ?");
-for(let i = 0; i <= nbrBomb; i++){
+let nbrBombe = +prompt("combien de bombes sur le terrain ?");
+for(let i = 0; i <= nbrBombe; i++){
     let posBomb1 = Math.floor(Math.random()*5);
     let posBomb2 = Math.floor(Math.random()*5);
     while (plateau[posBomb1][posBomb2] !== 0){
