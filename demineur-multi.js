@@ -1,6 +1,6 @@
 let plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 let tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
-let nbJoueur = +prompt("combien de joueurs ?"),let maxTour=0;
+let nbJoueur = +prompt("combien de joueurs ?"),maxTour=0;
 
 function nbBombe(){
 let nbrBomb = +prompt("combien de bombes sur le terrain ?");
@@ -54,4 +54,12 @@ function testVal(ligne, colone,tourJoueur){
         tableJoueur[tourJoueur][1] -= 1;
         tableJoueur[tourJoueur][0] -= 100;
     }
+}
+
+function reset()
+{
+    plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
+    tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
+    nbJoueur = +prompt("combien de joueurs ?");
+    maxTour=0;
 }
