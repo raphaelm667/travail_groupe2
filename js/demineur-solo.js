@@ -14,7 +14,6 @@ function nbBombe()
 			plateau[posBomb1][posBomb2] = 2;
 		}
 	  }
-	}
 }
 
 function testVal(ligne, colone){
