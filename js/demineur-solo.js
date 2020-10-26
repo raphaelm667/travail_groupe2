@@ -15,13 +15,6 @@ function nbBombe()
 		}
 	  }
 	}
-
-	for (let i = 0; i < 5; i++){
-		for (let j = 0; j < 5; j++) {
-			if (plateau[i][j] === 0){
-				plateau[i][j] = 1;
-			}
-		}
 }
 
 function testVal(ligne, colone){
@@ -29,7 +22,7 @@ function testVal(ligne, colone){
         alert("vous n'avez plus de vie recommencé une partie");
     }else if (plateau[ligne][colone] === 3){
         alert("case deja testée");
-    }else if (plateau[ligne][colone] === 1){
+    }else if (plateau[ligne][colone] === 0){
         alert("Safe");
         plateau[ligne][colone] = 3;
     }else{
