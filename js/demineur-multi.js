@@ -1,7 +1,6 @@
 let plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 let tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
 let nbJoueur = +prompt("combien de joueurs ?"),maxTour=0;
-let maxTour = 0;
 
 function nbBombe(){
 let nbrBombe = +prompt("combien de bombes sur le terrain ?");
