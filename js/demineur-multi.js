@@ -20,9 +20,10 @@ for(let i = 0; i <= nbrBombe; i++){
 }
 function joueur(ligne,colone)
 {
+  let i;
   let tourJoueur;
   while(maxTour !== 25){
-  for(let i=0;i<nbJoueur;i++)
+  for(i=0;i<nbJoueur;i++)
   {
     tourJoueur = i;
     alerte("Tour joueur"+(i+1));
