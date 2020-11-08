@@ -21,7 +21,7 @@ for(let i = 0; i <= nbrBombe; i++){
 }
 function joueur(ligne,colone)
 {
-    if(i == nbJoueur)
+    if(i == nbJoueur-1)
     {
         i = -1;
     }
@@ -40,6 +40,7 @@ function joueur(ligne,colone)
     if(maxTour == 25)
     {
      alert("partie terminer");
+     console.log(tableJoueur);
     }
 }
 
