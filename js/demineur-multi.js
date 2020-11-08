@@ -3,7 +3,7 @@ let plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 let tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
 let nbJoueur = +prompt("combien de joueurs ?");
 let maxTour=0;
-let tourJoueur;
+let tourJoueur,i=-1;
 
 function nbBombe(){
 let nbrBombe = +prompt("combien de bombes sur le terrain ?");
@@ -21,9 +21,11 @@ for(let i = 0; i <= nbrBombe; i++){
 }
 function joueur(ligne,colone)
 {
-  while(maxTour !== 5){
-  for(let i=0;i<nbJoueur;i++)
-  {
+    if(i == nbJoueur)
+    {
+        i = -1;
+    }
+    i += 1;  
     tourJoueur = i;
     alert("Tour Joueur "+(i+1));
     if (tableJoueur[tourJoueur][1] !== 0)
@@ -34,10 +36,11 @@ function joueur(ligne,colone)
    {
     alert("Joueur"+ (tourJoueur +1) +" n'as plus de vie");
    }
- }
     maxTour++;
- }
-    alert("partie terminer");
+    if(maxTour == 25)
+    {
+     alert("partie terminer");
+    }
 }
 
 function testVal(ligne, colone,tourJoueur){
