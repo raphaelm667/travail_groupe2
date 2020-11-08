@@ -6,11 +6,11 @@ let maxTour=0;
 function nbBombe(){
 let nbrBombe = +prompt("combien de bombes sur le terrain ?");
 for(let i = 0; i <= nbrBombe; i++){
-    let posBomb1 = Math.floor(Math.random()*5);
-    let posBomb2 = Math.floor(Math.random()*5);
+    let posBomb1 = Math.floor(Math.random()*4);
+    let posBomb2 = Math.floor(Math.random()*4);
     while (plateau[posBomb1][posBomb2] !== 0){
-        posBomb1 = Math.floor(Math.random()*5);
-        posBomb2 = Math.floor(Math.random()*5);
+        posBomb1 = Math.floor(Math.random()*4);
+        posBomb2 = Math.floor(Math.random()*4);
     }
     if (plateau[posBomb1][posBomb2] === 0){
         plateau[posBomb1][posBomb2] = 2;
@@ -63,4 +63,5 @@ function reset()
     tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
     nbJoueur = +prompt("combien de joueurs ?");
     maxTour=0;
+    nbBombe();
 }
