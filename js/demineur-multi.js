@@ -20,13 +20,12 @@ for(let i = 0; i <= nbrBombe; i++){
 }
 function joueur(ligne,colone)
 {
-  let i;
   let tourJoueur;
   while(maxTour !== 25){
-  for(i=0;i<nbJoueur;i++)
+  for(let i=0;i<nbJoueur;i++)
   {
     tourJoueur = i;
-    alerte("Tour joueur"+(i+1));
+    alert("Tour joueur"+(i+1));
     if (tableJoueur[tourJoueur][1] !== 0){
     testVal(ligne,colone,tourJoueur);
     }
