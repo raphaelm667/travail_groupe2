@@ -34,6 +34,7 @@ function joueur(ligne,colone)
     maxTour++;
    }
  }
+    alert("partie terminer");
 }
 
 function testVal(ligne, colone,tourJoueur){
