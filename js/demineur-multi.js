@@ -25,27 +25,23 @@ function joueur(ligne,colone)
   for(let i=0;i<nbJoueur;i++)
   {
     tourJoueur = i;
-    alert("Tour joueur"+(i+1));
-    if (tableJoueur[tourJoueur][1] !== 0){
-    testVal(ligne,colone,tourJoueur);
-    }
+    alert("Tour Joueur "+(i+1));
+    if (tableJoueur[tourJoueur][1] !== 0)
+   {    
+    testVal2(ligne,colone,tourJoueur);
+   }
     else
-    {
-    alert("Joueur"+ (tourjoueur +1) +" n'as plus de vie");
-    }
+   {
+    alert("Joueur"+ (tourJoueur +1) +" n'as plus de vie");
+   }
+ }
     maxTour++;
    }
  }
     alert("partie terminer");
 }
 
-function testVal(ligne, colone,tourJoueur){
-    let unSur2=-1;
-    unSur2++;
-    if(unSur2%2==0)
-    {
-        joueur(ligne,colone);
-    }
+function testVal2(ligne, colone,tourJoueur){
     if (plateau[ligne][colone] === 3){
         alert("case deja testée");
     }else if (plateau[ligne][colone] === 0){
