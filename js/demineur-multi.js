@@ -28,7 +28,7 @@ function joueur(ligne,colone)
     alert("Tour Joueur "+(i+1));
     if (tableJoueur[tourJoueur][1] !== 0)
    {    
-    testVal2(ligne,colone,tourJoueur);
+    testVal(ligne,colone,tourJoueur);
    }
     else
    {
@@ -41,7 +41,7 @@ function joueur(ligne,colone)
     alert("partie terminer");
 }
 
-function testVal2(ligne, colone,tourJoueur){
+function testVal(ligne, colone,tourJoueur){
     if (plateau[ligne][colone] === 3){
         alert("case deja testée");
     }else if (plateau[ligne][colone] === 0){
