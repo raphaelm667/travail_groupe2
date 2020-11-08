@@ -21,7 +21,7 @@ for(let i = 0; i <= nbrBombe; i++){
 }
 function joueur(ligne,colone)
 {
-  while(maxTour !== 25){
+  while(maxTour !== 5){
   for(let i=0;i<nbJoueur;i++)
   {
     tourJoueur = i;
@@ -36,7 +36,6 @@ function joueur(ligne,colone)
    }
  }
     maxTour++;
-   }
  }
     alert("partie terminer");
 }
