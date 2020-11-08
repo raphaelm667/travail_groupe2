@@ -55,7 +55,7 @@ function testVal(ligne, colone,tourJoueur){
     }
 }
 
-function reset()
+function resete()
 {
     plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
     tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
