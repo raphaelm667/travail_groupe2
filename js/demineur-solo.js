@@ -1,3 +1,4 @@
+"use strict";
 let plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 let nbrVie = 4;
 function nbBombe()
