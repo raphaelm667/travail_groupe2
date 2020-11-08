@@ -3,6 +3,7 @@ let plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 let tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
 let nbJoueur = +prompt("combien de joueurs ?");
 let maxTour=0;
+let tourJoueur;
 
 function nbBombe(){
 let nbrBombe = +prompt("combien de bombes sur le terrain ?");
@@ -20,7 +21,6 @@ for(let i = 0; i <= nbrBombe; i++){
 }
 function joueur(ligne,colone)
 {
-  let tourJoueur;
   while(maxTour !== 25){
   for(let i=0;i<nbJoueur;i++)
   {
