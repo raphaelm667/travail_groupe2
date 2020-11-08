@@ -24,7 +24,7 @@ function joueur(ligne,colone)
   for(let i=0;i<nbJoueur;i++)
   {
     tourJoueur = i;
-    alerte("Tour joueur"+i);
+    alerte("Tour joueur"+(i+1));
     if (tableJoueur[tourJoueur][1] !== 0){
     testVal(ligne,colone,tourJoueur);
     }
