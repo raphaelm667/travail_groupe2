@@ -1,7 +1,7 @@
 "use strict";
 let plateau = [[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]];
 let tableJoueur = [[0,3],[0,3],[0,3],[0,3]];
-let nbJoueur = +prompt("combien de joueurs ?");
+let nbJoueur = +prompt("combien de joueurs ?(max 4)");
 let maxTour=0;
 let tourJoueur,i=-1;
 
